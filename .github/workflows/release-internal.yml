@@ -1,5 +1,12 @@
+name: Release
+
 on:
-  workflow_call:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
 
 permissions: read-all
 

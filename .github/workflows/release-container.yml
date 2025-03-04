@@ -1,12 +1,5 @@
-name: Release Container
-
 on:
-  release:
-    types: [published]
-
-  pull_request:
-    branches:
-      - main
+  workflow_call:
 
 permissions: read-all
 
