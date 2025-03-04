@@ -1,8 +1,6 @@
 on:
   workflow_call:
 
-permissions: read-all
-
 jobs:
   release:
     permissions:
