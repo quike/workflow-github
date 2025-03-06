@@ -13,6 +13,7 @@ jobs:
         with:
           fetch-tags: true
       - name: Release
+        id: release
         uses: quike/action-semantic-release@v2.3
         with:
           debug-mode: true
@@ -23,3 +24,12 @@ jobs:
           add-summary: true
         env:
           GITHUB_TOKEN: ${{ secrets.GHTOKEN }}
+    outputs:
+      release-published: ${{ steps.release.outputs.release-published }}
+      release-version: ${{ steps.release.outputs.release-version }}
+      release-major: ${{ steps.release.outputs.release-major }}
+      release-minor: ${{ steps.release.outputs.release-minor }}
+      release-patch: ${{ steps.release.outputs.release-patch }}
+      release-type: ${{ steps.release.outputs.release-type }}
+      release-git-head: ${{ steps.release.outputs.release-git-head }}
+      release-git-tag: ${{ steps.release.outputs.release-git-tag }}
