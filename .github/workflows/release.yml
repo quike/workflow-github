@@ -18,7 +18,8 @@ jobs:
           debug-mode: true
           dry-run: false
           default-config: true
-          floating-tags: true
+          default-preset-info: true
+          floating-tags: false
           add-summary: true
         env:
           GITHUB_TOKEN: ${{ secrets.GHTOKEN }}
