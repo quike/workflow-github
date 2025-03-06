@@ -1,5 +1,30 @@
 on:
   workflow_call:
+    outputs:
+      release-published:
+        description: "True if a new release is performed, false otherwise."
+        value: ${{ jobs.release.outputs.release-published }}
+      release-version:
+        description: "New version or current version if not released, example: 1.2.3"
+        value: ${{ jobs.release.outputs.release-version }}
+      release-major:
+        description: "New Major version of the semver, example: 1."
+        value: ${{ jobs.release.outputs.release-major }}
+      release-minor:
+        description: "New Minor version of the semver, example: .2."
+        value: ${{ jobs.release.outputs.release-minor }}
+      release-patch:
+        description: "New Path version of the semver, example: .3"
+        value: ${{ jobs.release.outputs.release-patch }}
+      release-type:
+        description: "Type of semver promotion: major, minor or patch."
+        value: ${{ jobs.release.outputs.release-type }}
+      release-git-head:
+        description: "SHA value associated to release commit."
+        value: ${{ jobs.release.outputs.release-git-head }}
+      release-git-tag:
+        description: "Git Tag associated to release commit."
+        value: ${{ jobs.release.outputs.release-git-tag }}
 
 jobs:
   release:
