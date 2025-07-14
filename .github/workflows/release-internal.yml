@@ -22,7 +22,7 @@ jobs:
         with:
           fetch-tags: true
       - name: Release
-        uses: quike/action-semantic-release@v2.61
+        uses: quike/action-semantic-release@v2.62
         with:
           debug-mode: true
           dry-run: false
