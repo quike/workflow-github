@@ -18,11 +18,11 @@ jobs:
     name: Release
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
           fetch-tags: true
       - name: Release
-        uses: quike/action-semantic-release@v3.2
+        uses: quike/action-semantic-release@daf2d0ffd5b987539616e570c4eb72540ef604d5 # v3.3
         with:
           debug-mode: true
           dry-run: false
