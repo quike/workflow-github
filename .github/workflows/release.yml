@@ -39,7 +39,7 @@ jobs:
           fetch-tags: true
       - name: Release
         id: release
-        uses: quike/action-semantic-release@64500fdf2d3ce2e7101a69750b8368fdd753226d # v3.34
+        uses: quike/action-semantic-release@007f9ab8e1f0b026f33bf1719b6e216eb393c8a4 # v3.35
         with:
           debug-mode: true
           dry-run: false
